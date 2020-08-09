@@ -10,17 +10,18 @@
     --wrapperSpace: 1.5em;
 }
 
-@import "./header.scss";
-@import "./hero.scss";
-@import "./menu.scss";
-@import "./why.scss";
-@import "./lastestArticles.scss";
-
 body {
     font-family: 'Public Sans', sans-serif;
     margin: 0;
     color: var(--grayBlue);
 }
+
+@import "./header.scss";
+@import "./hero.scss";
+@import "./menu.scss";
+@import "./why.scss";
+@import "./lastestArticles.scss";
+@import "./footer.scss";
 
 .copy {
     font-size: .9em;
@@ -60,5 +61,35 @@ body {
     border-radius: 1.5em;
     color: var(--white);
     font-size: 1.3em;
-    border-style: none;
+    border: none;
+}
+
+@mixin icon {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+.icon {
+    &__facebook {
+        @include icon;
+        background-image: url('../images/icon-facebook.svg');
+    }
+    &__youtube {
+        @include icon;
+        background-image: url('../images/icon-youtube.svg');
+    }
+    &__twitter {
+        @include icon;
+        background-image: url('../images/icon-twitter.svg');
+    }
+    &__pinterest {
+        @include icon;
+        background-image: url('../images/icon-pinterest.svg');
+    }
+    &__instagram {
+        @include icon;
+        background-image: url('../images/icon-instagram.svg');
+    }
 }
