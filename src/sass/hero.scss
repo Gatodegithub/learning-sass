@@ -1,0 +1,16 @@
+.hero {
+    text-align: center;
+    padding-bottom: 5em;
+    // Le aplico un estilo al copy que esta dentro del hero
+    .copy {
+        margin-bottom: 2.5em;
+    }
+    &__image {
+        height: 300px;
+        // margin: 0 calc(-1 * var(--wrapperSpace));
+        // Usar la ruta como si estuviera ubicado en estilos.css!!!!
+        background: url('../images/image-mockups.png') bottom no-repeat, url('../images/bg-intro-mobile.svg') center 25% no-repeat;
+        background-size: 345px, cover;
+        margin-bottom: 1em;
+    }
+}
